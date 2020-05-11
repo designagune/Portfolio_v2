@@ -4,9 +4,15 @@
 <head>
     <title>Gune's Portfolio</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/reset.css" rel="stylesheet" />
     <link href="./css/common.css" rel="stylesheet" />
     <link href="./css/index.css" rel="stylesheet" />
+    <script>
+        window.onload = function () {
+
+        }
+    </script>
 </head>
 
 <body>
@@ -15,44 +21,53 @@
             <h2>Donggun</h2>
             <p>Web Publisher<br />& Frontend Engineer</p>
         </div>
-        <div class="intro-image">
-
-        </div>
+        <div class="intro-image"></div>
     </section>
     <div class="visual-section-wrap1">
         <section class="visual-section2">
-            <div class="face-image">
-
-            </div>
-            <div class="about-me">
-                <h2>About Me</h2>
-                <p>
-                    Lorem ipsum dolor sit amet,
-                </p>
+            <div class="visual-container">
+                <div class="face-image-box">
+                    <img class="face-image" src="./image/faceImage.png" alt="myPhoto" />
+                    <div class="face-image-shadow"></div>
+                </div>
+                <div class="about-me">
+                    <h2>About Me</h2>
+                    <p>
+                        공감대 형성을 좋아하며<br />
+                        사용자 편의성을 중요하게 생각하고<br />
+                        웹 페이지는 따듯해야 한다고 생각하는<br />
+                        저는 <strong>웹 퍼블리셔</strong> 입니다.<br />
+                    </p>
+                </div>
             </div>
         </section>
         <section class="visual-section3">
-            <h3>My Skills</h3>
-            <p>다룰 수 있는 기술을 소개합니다</p>
-            <div class="skill-list">
-                <div class="skill">HTML5</div>
-                <div class="skill">CSS3</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">ReactJS</div>
-                <div class="skill">PHP</div>
-                <div class="skill">PhotoShop</div>
+            <div class="visual-container">
+                <h3>My Skills</h3>
+                <p>다룰 수 있는 기술을 소개합니다</p>
+                <div class="skill-list">
+                    <div class="skill">HTML5</div>
+                    <div class="skill">CSS3</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">ReactJS</div>
+                    <div class="skill">PHP</div>
+                    <div class="skill">PhotoShop</div>
+                </div>
             </div>
         </section>
     </div>
     <div class="visual-section-wrap2">
         <section class="visual-section4">
-            <h3>Projects</h3>
-            <p>프로젝트들을 소개합니다</p>
-            <div class="project">Landing page</div>
-            <!--400 277-->
-            <div class="project">vivid</div>
-            <div class="project">배달의민족<br />Renewal</div>
-            <div class="project">국문관광정보서비스</div>
+            <div class="visual-container">
+                <h3>Projects</h3>
+                <p>프로젝트들을 소개합니다</p>
+                <div class="project-wrap">
+                    <div class="project landing-page">Landing page</div>
+                    <div class="project vivid">vivid</div>
+                    <div class="project baemin">배달의민족 리뉴얼</div>
+                    <div class="project tourism">국문관광정보서비스</div>
+                </div>
+            </div>
         </section>
     </div>
     <section class="visual-section5">

@@ -1,0 +1,35 @@
+@font-face {
+    font-family: notoKR-thin;
+    src: url("../font/NotoSansKR-Thin.otf");
+}
+
+@font-face {
+    font-family: notoKR;
+    src: url("../font/NotoSansKR-Regular.otf");
+}
+
+@font-face {
+    font-family: notoKR-bold;
+    src: url("../font/NotoSansKR-Bold.otf");
+}
+
+@font-face {
+    font-family: roboto-thin;
+    src: url("../font/Roboto-Thin.ttf");
+}
+
+@font-face {
+    font-family: roboto;
+    src: url("../font/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url("../font/Roboto-Bold.ttf");
+}
+
+.visual-container {
+    width: 1200px;
+    margin: 0 auto;
+    /* background: #eee; */
+}

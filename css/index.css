@@ -1,0 +1,312 @@
+@charset "UTF-8";
+
+.visual-section1 {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    height: 900px;
+    border-bottom: 1px solid #eee;
+}
+
+.visual-section1 .introduce,
+.visual-section1 .intro-image {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    user-select: none;
+}
+
+.visual-section1 .introduce {
+    font-family: roboto;
+}
+
+.visual-section1 .introduce h2 {
+    color: #359eff;
+    text-align: center;
+    font-size: 5.5rem;
+    margin-bottom: 30px;
+}
+
+.visual-section1 .introduce p {
+    color: #999;
+    font-size: 2.2rem;
+    position: absolute;
+    left: 49%;
+    transform: translateX(-51%);
+}
+
+.visual-section1 .intro-image::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #0c5eb2;
+    z-index: 1;
+
+    opacity: .75;
+}
+
+.visual-section1 .intro-image {
+    width: 36.4583%;
+    background: url("../image/mainImage.jpg") no-repeat;
+    background-size: cover;
+}
+
+.visual-section2 {
+    width: 100%;
+    height: 687px;
+}
+
+.visual-section2 .visual-container {
+    display: table;
+    padding-top: 100px;
+    height: 100%;
+}
+
+.visual-section2 .visual-container .face-image-box,
+.visual-section2 .visual-container .about-me {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.visual-section2 .visual-container .face-image-box {
+    position: relative;
+    width: 44.916%;
+    height: 100%;
+    text-align: center;
+
+}
+
+.visual-section2 .visual-container .face-image-box .face-image {
+    position: relative;
+    z-index: 1;
+}
+
+.visual-section2 .visual-container .face-image-box .face-image-shadow {
+    position: absolute;
+    top: 150px;
+    left: 130px;
+    width: 230px;
+    height: 246px;
+    background: url("../image/faceImageBack.png") no-repeat;
+    background-size: contain;
+}
+
+
+
+.visual-section2 .visual-container .about-me h2 {
+    margin: 0 0 20px;
+    color: #0c5eb2;
+    font-size: 3.08rem;
+    font-family: roboto;
+}
+
+.visual-section2 .visual-container .about-me p {
+    margin-left: 15px;
+    font-size: 1.6rem;
+    color: #666;
+    font-family: notoKR;
+}
+
+.visual-section3 {
+    width: 100%;
+    height: 687px;
+    text-align: center;
+}
+
+.visual-section3 .visual-container {
+    padding-top: 220px;
+    vertical-align: middle;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.visual-section3 .visual-container h3 {
+    font-family: roboto;
+    font-size: 2.4rem;
+    color: #2b2b2b;
+    position: relative;
+}
+
+.visual-section3 .visual-container h3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 84px;
+    height: 3px;
+    background: #0c5eb2;
+}
+
+.visual-section3 .visual-container p {
+    font-weight: bold;
+    font-family: notoKR;
+    color: #0c5eb2;
+    margin-top: 26px;
+}
+
+.visual-section3 .visual-container .skill-list {
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    transform: translate(-50%);
+    display: table;
+    width: 80%;
+}
+
+.visual-section3 .visual-container .skill-list .skill {
+    font-family: roboto;
+    font-size: 1.2rem;
+    display: table-cell;
+    position: relative;
+}
+
+.visual-section3 .visual-container .skill-list .skill::before {
+    content: "";
+    display: block;
+    margin: 0 auto 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.visual-section3 .visual-container .skill-list .skill:first-child::before {
+    background: url("../image/html5.svg") no-repeat center center;
+    width: 110px;
+    height: 110px;
+}
+
+.visual-section3 .visual-container .skill-list .skill:nth-child(2)::before {
+    background: url("../image/css.svg") no-repeat center center;
+    width: 110px;
+    height: 110px;
+}
+
+.visual-section3 .visual-container .skill-list .skill:nth-child(3)::before {
+    background: url("../image/js.svg") no-repeat center center;
+}
+
+.visual-section3 .visual-container .skill-list .skill:nth-child(4)::before {
+    background: url("../image/react.svg") no-repeat center center;
+}
+
+.visual-section3 .visual-container .skill-list .skill:nth-child(5)::before {
+    background: url("../image/php.svg") no-repeat center center;
+}
+
+.visual-section3 .visual-container .skill-list .skill:nth-child(6)::before {
+    background: url("../image/ps.svg") no-repeat center center;
+}
+
+.visual-section-wrap2::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url("../image/section_background.jpg") no-repeat;
+    opacity: .25;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.visual-section-wrap2 {
+    width: 100%;
+    height: 1640px;
+    position: relative;
+}
+
+.visual-section4 {
+    height: 820px;
+}
+
+.visual-section4 .visual-container {
+    height: 100%;
+    text-align: center;
+    padding-top: 154px;
+}
+
+.visual-section4 .visual-container h3 {
+
+    font-family: roboto;
+    font-size: 2.4rem;
+    color: #2b2b2b;
+    position: relative;
+}
+
+.visual-section4 .visual-container h3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 56px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 84px;
+    height: 3px;
+    background: #0c5eb2;
+}
+
+.visual-section4 .visual-container p {
+    font-weight: bold;
+    font-family: notoKR;
+    color: #0c5eb2;
+    margin-top: 26px;
+    position: relative;
+}
+
+.visual-section4 .visual-container .project-wrap {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    position: relative;
+    top: 117px;
+}
+
+.visual-section4 .visual-container .project-wrap .project::before {
+    content: "";
+    display: block;
+    margin: 0 auto 20px;
+    width: 277px;
+    height: 400px;
+    box-shadow: -1px 1px 10px #ccc;
+    cursor: pointer;
+}
+
+.visual-section4 .visual-container .project-wrap .project {
+    display: table-cell;
+    color: #2b2b2b;
+}
+
+.visual-section4 .visual-container .project-wrap .project.landing-page,
+.visual-section4 .visual-container .project-wrap .project.vivid {
+    font-family: roboto-bold;
+    font-size: 1.3rem;
+
+}
+
+.visual-section4 .visual-container .project-wrap .project.baemin,
+.visual-section4 .visual-container .project-wrap .project.tourism {
+    font-family: notoKR-bold;
+    font-size: 1.3rem;
+
+}
+
+
+.visual-section4 .visual-container .project-wrap .project:first-child::before {
+    background: url("http://placehold.it/277x400") no-repeat;
+}
+
+.visual-section4 .visual-container .project-wrap .project:nth-child(2)::before {
+    background: url("../image/vivid.jpg") no-repeat;
+}
+
+.visual-section4 .visual-container .project-wrap .project:nth-child(3)::before {
+    background: url("../image/baemin.jpg") no-repeat;
+}
+
+.visual-section4 .visual-container .project-wrap .project:nth-child(4)::before {
+    background: url("../image/tour.jpg") no-repeat;
+}
