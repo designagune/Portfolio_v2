@@ -1,312 +1,630 @@
 @charset "UTF-8";
 
 .visual-section1 {
-    width: 100%;
-    display: table;
-    table-layout: fixed;
-    height: 900px;
-    border-bottom: 1px solid #eee;
+  position: relative;
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  height: 980px;
+  border-bottom: 1px solid #eee;
 }
 
 .visual-section1 .introduce,
 .visual-section1 .intro-image {
-    display: table-cell;
-    vertical-align: middle;
-    position: relative;
-    user-select: none;
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  user-select: none;
 }
 
 .visual-section1 .introduce {
-    font-family: roboto;
+  font-family: roboto;
+  width:63.5%;
+  height:100%;
 }
 
 .visual-section1 .introduce h2 {
-    color: #359eff;
-    text-align: center;
-    font-size: 5.5rem;
-    margin-bottom: 30px;
+  color: #359eff;
+  text-align: center;
+  font-size: 5.5rem;
+  margin-bottom: 30px;
 }
 
 .visual-section1 .introduce p {
-    color: #999;
-    font-size: 2.2rem;
-    position: absolute;
-    left: 49%;
-    transform: translateX(-51%);
+  color: #999;
+  font-size: 2.2rem;
+  position: absolute;
+  left: 49%;
+  transform: translateX(-51%);
 }
 
-.visual-section1 .intro-image::before {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: #0c5eb2;
-    z-index: 1;
-
-    opacity: .75;
-}
 
 .visual-section1 .intro-image {
-    width: 36.4583%;
-    background: url("../image/mainImage.jpg") no-repeat;
-    background-size: cover;
+  width: 36.4583%;
+  background: url("../image/mainImage.jpg") no-repeat;
+  background-size: cover;
+}
+
+.visual-section1 .intro-wrap{
+  position: absolute;
+  top:0;
+  right:0;
+  width: 36.4583%;
+  height: 100%;
+  background: #0c5eb2;
+  z-index: 1;
+  opacity: 0.75;
+}
+
+.visual-section1 .intro-wrap .intro-title{
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  width:70%;
+  height:70%;
+  margin:auto;
+}
+
+.visual-section1 .intro-wrap .intro-title svg{
+  width:100%;
+}
+
+.visual-section1 .intro-wrap .intro-title .st0 {
+  fill: #EDF2FF;
+  stroke:#EDF2FF;
+  stroke-width: 1.5;
+  stroke-miterlimit: 10;
+  opacity: 0;
+}
+
+.visual-section1 .intro-wrap .intro-title .st0[data-status=on]
+{
+  animation: title-animation 3s;
+  opacity: 1;
+}
+
+@keyframes title-animation{
+  0%{
+    opacity: 0;
+    fill:none;
+    stroke-dasharray: 200;
+  }
+
+  30%{
+    opacity: 1;
+    fill:none;
+    stroke-dasharray: 400;
+  }
+
+  70%{
+    opacity: 1;
+    fill:none;
+    stroke-dasharray: 800;
+  }
+
+  90%{
+    opacity: 1;
+    fill:rgba(237,242,255,0);
+    stroke-dasharray: 1000;
+  }
+
+  100%{
+    opacity: 1;
+    stroke-dasharray: 1200;
+    fill:rgba(237,242,255,1);
+  }
 }
 
 .visual-section2 {
-    width: 100%;
-    height: 687px;
+  width: 100%;
+  height: 687px;
 }
 
 .visual-section2 .visual-container {
-    display: table;
-    padding-top: 100px;
-    height: 100%;
+  display: table;
+  padding-top: 100px;
+  height: 100%;
 }
 
 .visual-section2 .visual-container .face-image-box,
 .visual-section2 .visual-container .about-me {
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .visual-section2 .visual-container .face-image-box {
-    position: relative;
-    width: 44.916%;
-    height: 100%;
-    text-align: center;
-
+  position: relative;
+  width: 44.916%;
+  height: 100%;
+  text-align: center;
 }
 
 .visual-section2 .visual-container .face-image-box .face-image {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .visual-section2 .visual-container .face-image-box .face-image-shadow {
-    position: absolute;
-    top: 150px;
-    left: 130px;
-    width: 230px;
-    height: 246px;
-    background: url("../image/faceImageBack.png") no-repeat;
-    background-size: contain;
+  position: absolute;
+  top: 150px;
+  left: 130px;
+  width: 230px;
+  height: 246px;
+  background: url("../image/faceImageBack.png") no-repeat;
+  background-size: contain;
 }
 
-
-
 .visual-section2 .visual-container .about-me h2 {
-    margin: 0 0 20px;
-    color: #0c5eb2;
-    font-size: 3.08rem;
-    font-family: roboto;
+  margin: 0 0 20px;
+  color: #0c5eb2;
+  font-size: 3.08rem;
+  font-family: roboto;
 }
 
 .visual-section2 .visual-container .about-me p {
-    margin-left: 15px;
-    font-size: 1.6rem;
-    color: #666;
-    font-family: notoKR;
+  margin-left: 15px;
+  font-size: 1.6rem;
+  color: #666;
+  font-family: notoKR;
+}
+
+.visual-section2 .visual-container .about-me .me-wrap {
+  display: inline-block;
+  position: relative;
+  width: 220px;
+  height: 30px;
+}
+
+.visual-section2 .visual-container .about-me .me-wrap span {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 220px;
+  font-family: notoKR-bold;
+  opacity: 0;
+}
+
+.visual-section2 .visual-container .about-me .me-wrap span.me-in {
+  opacity: 1;
+  animation: down 1.3s;
+}
+
+.visual-section2 .visual-container .about-me .me-wrap span.me-out {
+  opacity: 0;
+  animation: down2 1.3s;
+}
+
+@keyframes down {
+  0% {
+    opacity: 0;
+    top: -30px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes down2 {
+  0% {
+    opacity: 1;
+    top: 0;
+  }
+
+  100% {
+    opacity: 0;
+    top: 30px;
+  }
 }
 
 .visual-section3 {
-    width: 100%;
-    height: 687px;
-    text-align: center;
+  width: 100%;
+  height: 687px;
+  text-align: center;
 }
 
 .visual-section3 .visual-container {
-    padding-top: 220px;
-    vertical-align: middle;
-    position: relative;
-    height: 100%;
-    overflow: hidden;
+  padding-top: 220px;
+  vertical-align: middle;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 .visual-section3 .visual-container h3 {
-    font-family: roboto;
-    font-size: 2.4rem;
-    color: #2b2b2b;
-    position: relative;
+  font-family: roboto;
+  font-size: 2.4rem;
+  color: #2b2b2b;
+  position: relative;
 }
 
 .visual-section3 .visual-container h3::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 56px;
-    left: 50%;
-    transform: translate(-50%);
-    width: 84px;
-    height: 3px;
-    background: #0c5eb2;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 84px;
+  height: 3px;
+  background: #0c5eb2;
 }
 
 .visual-section3 .visual-container p {
-    font-weight: bold;
-    font-family: notoKR;
-    color: #0c5eb2;
-    margin-top: 26px;
+  font-weight: bold;
+  font-family: notoKR;
+  color: #0c5eb2;
+  margin-top: 26px;
 }
 
 .visual-section3 .visual-container .skill-list {
-    position: absolute;
-    left: 50%;
-    bottom: 150px;
-    transform: translate(-50%);
-    display: table;
-    width: 80%;
+  position: absolute;
+  left: 50%;
+  bottom: 150px;
+  transform: translate(-50%);
+  display: table;
+  width: 80%;
 }
 
 .visual-section3 .visual-container .skill-list .skill {
-    font-family: roboto;
-    font-size: 1.2rem;
-    display: table-cell;
-    position: relative;
+  font-family: roboto;
+  font-size: 1.2rem;
+  display: table-cell;
+  position: relative;
 }
 
 .visual-section3 .visual-container .skill-list .skill::before {
-    content: "";
-    display: block;
-    margin: 0 auto 20px;
-    width: 100px;
-    height: 100px;
+  content: "";
+  display: block;
+  margin: 0 auto 20px;
+  width: 100px;
+  height: 100px;
 }
 
 .visual-section3 .visual-container .skill-list .skill:first-child::before {
-    background: url("../image/html5.svg") no-repeat center center;
-    width: 110px;
-    height: 110px;
+  background: url("../image/html5.svg") no-repeat center center;
+  width: 110px;
+  height: 110px;
 }
 
 .visual-section3 .visual-container .skill-list .skill:nth-child(2)::before {
-    background: url("../image/css.svg") no-repeat center center;
-    width: 110px;
-    height: 110px;
+  background: url("../image/css.svg") no-repeat center center;
+  width: 110px;
+  height: 110px;
 }
 
 .visual-section3 .visual-container .skill-list .skill:nth-child(3)::before {
-    background: url("../image/js.svg") no-repeat center center;
+  background: url("../image/js.svg") no-repeat center center;
 }
 
 .visual-section3 .visual-container .skill-list .skill:nth-child(4)::before {
-    background: url("../image/react.svg") no-repeat center center;
+  background: url("../image/react.svg") no-repeat center center;
 }
 
 .visual-section3 .visual-container .skill-list .skill:nth-child(5)::before {
-    background: url("../image/php.svg") no-repeat center center;
+  background: url("../image/php.svg") no-repeat center center;
 }
 
 .visual-section3 .visual-container .skill-list .skill:nth-child(6)::before {
-    background: url("../image/ps.svg") no-repeat center center;
+  background: url("../image/ps.svg") no-repeat center center;
 }
 
 .visual-section-wrap2::before {
-    content: "";
-    display: block;
-    position: absolute;
-    background: url("../image/section_background.jpg") no-repeat;
-    opacity: .25;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  background: url("../image/section_background.jpg") no-repeat;
+  opacity: 0.25;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .visual-section-wrap2 {
-    width: 100%;
-    height: 1640px;
-    position: relative;
+  width: 100%;
+  height: 1640px;
+  position: relative;
+  margin-bottom: 522px;
 }
 
 .visual-section4 {
-    height: 820px;
+  height: 820px;
 }
 
 .visual-section4 .visual-container {
-    height: 100%;
-    text-align: center;
-    padding-top: 154px;
+  height: 100%;
+  text-align: center;
+  padding-top: 154px;
 }
 
 .visual-section4 .visual-container h3 {
-
-    font-family: roboto;
-    font-size: 2.4rem;
-    color: #2b2b2b;
-    position: relative;
+  font-family: roboto;
+  font-size: 2.4rem;
+  color: #2b2b2b;
+  position: relative;
 }
 
 .visual-section4 .visual-container h3::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 56px;
-    left: 50%;
-    transform: translate(-50%);
-    width: 84px;
-    height: 3px;
-    background: #0c5eb2;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 56px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 84px;
+  height: 3px;
+  background: #0c5eb2;
 }
 
 .visual-section4 .visual-container p {
-    font-weight: bold;
-    font-family: notoKR;
-    color: #0c5eb2;
-    margin-top: 26px;
-    position: relative;
+  font-weight: bold;
+  font-family: notoKR;
+  color: #0c5eb2;
+  margin-top: 26px;
+  position: relative;
 }
 
 .visual-section4 .visual-container .project-wrap {
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    position: relative;
-    top: 117px;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  position: relative;
+  top: 117px;
 }
 
 .visual-section4 .visual-container .project-wrap .project::before {
-    content: "";
-    display: block;
-    margin: 0 auto 20px;
-    width: 277px;
-    height: 400px;
-    box-shadow: -1px 1px 10px #ccc;
-    cursor: pointer;
+  content: "";
+  display: block;
+  margin: 0 auto 20px;
+  width: 277px;
+  height: 400px;
+  box-shadow: -1px 1px 10px #ccc;
+  cursor: pointer;
 }
 
 .visual-section4 .visual-container .project-wrap .project {
-    display: table-cell;
-    color: #2b2b2b;
+  display: table-cell;
+  color: #2b2b2b;
 }
 
 .visual-section4 .visual-container .project-wrap .project.landing-page,
 .visual-section4 .visual-container .project-wrap .project.vivid {
-    font-family: roboto-bold;
-    font-size: 1.3rem;
-
+  font-family: roboto-bold;
+  font-size: 1.3rem;
 }
 
 .visual-section4 .visual-container .project-wrap .project.baemin,
 .visual-section4 .visual-container .project-wrap .project.tourism {
-    font-family: notoKR-bold;
-    font-size: 1.3rem;
-
+  font-family: notoKR-bold;
+  font-size: 1.3rem;
 }
 
-
 .visual-section4 .visual-container .project-wrap .project:first-child::before {
-    background: url("http://placehold.it/277x400") no-repeat;
+  background: url("http://placehold.it/277x400") no-repeat;
 }
 
 .visual-section4 .visual-container .project-wrap .project:nth-child(2)::before {
-    background: url("../image/vivid.jpg") no-repeat;
+  background: url("../image/vivid.jpg") no-repeat;
 }
 
 .visual-section4 .visual-container .project-wrap .project:nth-child(3)::before {
-    background: url("../image/baemin.jpg") no-repeat;
+  background: url("../image/baemin.jpg") no-repeat;
 }
 
 .visual-section4 .visual-container .project-wrap .project:nth-child(4)::before {
-    background: url("../image/tour.jpg") no-repeat;
+  background: url("../image/tour.jpg") no-repeat;
+}
+
+.visual-section5 {
+  height: 610px;
+  position: absolute;
+  bottom: -300px;
+  left: 0;
+  width: 100%;
+}
+
+.visual-section5 .visual-container {
+  display: table;
+  background: #fff;
+  height: 100%;
+  box-shadow: -1px 1px 5px #ddd;
+  font-family: roboto;
+}
+
+.visual-section5 .visual-container .send-message,
+.visual-section5 .visual-container .contact-information {
+  display: table-cell;
+}
+
+.visual-section5 .visual-container .send-message {
+  padding: 93px 60px;
+  vertical-align: top;
+  color: #949494;
+  position: relative;
+}
+
+.visual-section5 .visual-container .send-message h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.visual-section5 .visual-container .send-message label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.visual-section5 .visual-container .send-message input,
+.visual-section5 .visual-container .send-message textarea {
+  font-family: notoKR;
+  color: #333;
+  font-size: 1.1rem;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+  width: 100%;
+  transition: ease-in-out 0.3s;
+  outline: transparent;
+}
+
+.visual-section5 .visual-container .send-message input {
+  margin-bottom: 15px;
+}
+
+.visual-section5 .visual-container .send-message input:focus,
+.visual-section5 .visual-container .send-message textarea:focus {
+  border-bottom: 2px solid #0c5eb2;
+}
+
+.visual-section5 .visual-container .send-message input::placeholder,
+.visual-section5 .visual-container .send-message textarea::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+/*ie 10~11*/
+.visual-section5 .visual-container .send-message input:-ms-input-placeholder,
+.visual-section5 .visual-container .send-message textarea:-ms-input-placeholder {
+  color: #ccc;
+}
+
+/*edge*/
+.visual-section5 .visual-container .send-message input::-ms-input-placeholder,
+.visual-section5 .visual-container .send-message textarea::-ms-input-placeholder {
+  color: #ccc;
+}
+
+.visual-section5 .visual-container .send-message textarea {
+  resize: none;
+  height: 100px;
+}
+
+.visual-section5 .visual-container .send-message .submit-btn {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: #0c5eb2;
+  position: absolute;
+  bottom: 70px;
+  right: 70px;
+  border-radius: 50%;
+}
+
+.visual-section5 .visual-container .send-message .submit-btn::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: url("../image/paper.svg") center center no-repeat;
+  background-position-x: -1px;
+  padding-left: 1px;
+}
+
+.visual-section5 .visual-container .contact-information {
+  width: 33.75%;
+  color: #fff;
+  background: #0c5eb2;
+  position: relative;
+  box-sizing: border-box;
+  padding: 95px 42px;
+}
+
+.visual-section5 .visual-container .contact-information strong {
+  font-size: 1.94rem;
+  display: block;
+  margin-bottom: 60px;
+}
+
+.visual-section5 .visual-container .contact-information .contact-contents {
+  display: table;
+}
+
+.visual-section5 .visual-container .contact-information .contact-image,
+.visual-section5 .visual-container .contact-information .contact-text {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.visual-section5 .visual-container .contact-information .contact-contents .contact-image {
+  width: 13%;
+}
+
+.visual-section5 .visual-container .contact-information .contact-contents .contact-image img {
+  width: 100%;
+}
+
+.visual-section5 .visual-container .contact-information .addr,
+.visual-section5 .visual-container .contact-information .tel {
+  margin-bottom: 25px;
+}
+
+.visual-section5 .visual-container .contact-information .email {
+  margin-bottom: 65px;
+}
+
+.visual-section5 .visual-container .contact-information .tel .contact-image img {
+  width: 100%;
+  height: 35px;
+}
+
+.visual-section5 .visual-container .contact-information .email .contact-image img {
+  width: 100%;
+  height: 20px;
+}
+
+.visual-section5 .visual-container .contact-information .contact-text {
+  font-size: 1.25rem;
+}
+
+.visual-section5 .visual-container .contact-information .tel .contact-text a,
+.visual-section5 .visual-container .contact-information .email .contact-text a {
+  color: #fff;
+}
+
+.visual-section5 .visual-container .contact-information .personal-data::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #13508f;
+  margin-bottom: 65px;
+}
+
+.visual-section5 .visual-container .contact-information .sns {
+  display: table;
+  table-layout: fixed;
+}
+
+.visual-section5 .visual-container .contact-information .sns a {
+  display: table-cell;
+  color: transparent;
+  width: 60px;
+  height: 30px;
+  overflow: hidden;
+  max-width: 60px;
+  padding: 0 20px;
+}
+
+.visual-section5 .visual-container .contact-information .sns a:first-child {
+  background: url("../image/facebook.svg") center center no-repeat;
+}
+
+.visual-section5 .visual-container .contact-information .sns a:nth-child(2) {
+  background: url("../image/github.svg") center center no-repeat;
+}
+
+.visual-section5 .visual-container .contact-information .sns a:nth-child(3) {
+  background: url("../image/instagram.svg") center center no-repeat;
 }

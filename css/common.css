@@ -33,3 +33,7 @@
     margin: 0 auto;
     /* background: #eee; */
 }
+
+body {
+    position: relative;
+}
