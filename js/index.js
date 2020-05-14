@@ -43,7 +43,6 @@ window.addEventListener("scroll", function (e) {
       width: 1920,
       ease: Circ.easeInOut,
       onComplete: function () {
-        console.log(document.querySelectorAll("path"));
         [].forEach.call(document.querySelectorAll("path"), function (v) {
           v.setAttribute("data-status", "on");
         });
@@ -52,9 +51,37 @@ window.addEventListener("scroll", function (e) {
       },
       width: "100%"
     });
+  }
 
+  /* scroll parallax */
+  console.log(document.querySelector("html").scrollTop);
+  var locate = window.pageYOffset;
+  var svg = document.querySelector("#title-svg");
+  // console.log(locate);
+  // console.log(document.querySelector("#title-svg").style);
+  if (locate > 840) {
+    [].forEach.call(document.querySelectorAll("path"), function (v) {
+      v.style.fill = "#333";
+      v.style.stroke = "#333";
+    });
+  }
+  else {
+    [].forEach.call(document.querySelectorAll("path"), function (v) {
+      v.style.fill = "#EDF2FF";
+      v.style.stroke = "#EDF2FF";
+    });
+  }
+
+  if (locate > 0 && locate < 980) {
+    var calcValueTop = 50 - locate / 8;
+    var calcValueRight = 50 - locate / 8.5;
+
+    if (calcValueTop < 9.5) calcValueTop = 9.5;
+    svg.style.top = calcValueTop + "%";
+    if (calcValueRight < 12) calcValueRight = 12;
+    svg.style.right = calcValueRight + "%";
+
+    document.querySelector("#title-svg").style.width = 80 - locate / 5 + "%";
   }
 });
-
-
 
