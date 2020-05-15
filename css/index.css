@@ -273,51 +273,92 @@
   left: 50%;
   bottom: 150px;
   transform: translate(-50%);
-  display: table;
+  display:flex;
+  justify-content: space-around;
+  flex-flow: wrap;
   width: 80%;
+}
+
+.visual-section3 .visual-container .skill-list .skill-wrap{
+  display: table-cell;
+  table-layout: fixed;
 }
 
 .visual-section3 .visual-container .skill-list .skill {
   font-family: roboto;
   font-size: 1.2rem;
-  display: table-cell;
   position: relative;
+  transition:ease-in-out all .5s;
 }
 
 .visual-section3 .visual-container .skill-list .skill::before {
   content: "";
   display: block;
   margin: 0 auto 20px;
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+  transition:ease-in-out all .5s;
+}
+
+.visual-section3 .visual-container .skill-list .skill:hover{
+  -webkit-text-stroke: 1px #000;
+  transition:ease-in-out all .5s;
+}
+.visual-section3 .visual-container .skill-list .skill:hover::before{
+  animation: shaking 2s;
+  
+}
+
+@keyframes shaking{
+  0%{
+    transform: rotate(10deg);
+  }
+  40%{
+    transform: rotate(50deg);
+  }
+  48%{
+    transform: rotate(-20deg);
+  }
+  60%{
+    transform: rotate(20deg);
+  }
+  70%{
+    transform: rotate(-10deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+  /* transform: rotate(10deg); */
 }
 
 .visual-section3 .visual-container .skill-list .skill:first-child::before {
   background: url("../image/html5.svg") no-repeat center center;
-  width: 110px;
-  height: 110px;
+  background-size:cover;
 }
 
 .visual-section3 .visual-container .skill-list .skill:nth-child(2)::before {
   background: url("../image/css.svg") no-repeat center center;
-  width: 110px;
-  height: 110px;
+  background-size:cover;
 }
 
 .visual-section3 .visual-container .skill-list .skill:nth-child(3)::before {
   background: url("../image/js.svg") no-repeat center center;
+  background-size:cover;
 }
 
 .visual-section3 .visual-container .skill-list .skill:nth-child(4)::before {
   background: url("../image/react.svg") no-repeat center center;
+  background-size:cover;
 }
 
 .visual-section3 .visual-container .skill-list .skill:nth-child(5)::before {
   background: url("../image/php.svg") no-repeat center center;
+  background-size:cover;
 }
 
 .visual-section3 .visual-container .skill-list .skill:nth-child(6)::before {
   background: url("../image/ps.svg") no-repeat center center;
+  background-size:cover;
 }
 
 .visual-section-wrap2::before {
@@ -337,7 +378,6 @@
   width: 100%;
   height: 1640px;
   position: relative;
-  margin-bottom: 522px;
 }
 
 .visual-section4 {
@@ -413,25 +453,31 @@
 }
 
 .visual-section4 .visual-container .project-wrap .project:first-child::before {
-  background: url("http://placehold.it/277x400") no-repeat;
+  background: url("../image/landing.jpg") no-repeat center center;
 }
 
 .visual-section4 .visual-container .project-wrap .project:nth-child(2)::before {
-  background: url("../image/vivid.jpg") no-repeat;
+  background: url("../image/vivid.jpg") no-repeat center center;
 }
 
 .visual-section4 .visual-container .project-wrap .project:nth-child(3)::before {
-  background: url("../image/baemin.jpg") no-repeat;
+  background: url("../image/baemin.jpg") no-repeat center center;
 }
 
 .visual-section4 .visual-container .project-wrap .project:nth-child(4)::before {
-  background: url("../image/tour.jpg") no-repeat;
+  background: url("../image/tour.jpg") no-repeat center center;
+}
+
+.visual-section-wrap3{
+  width:100%;
+  height:400px;
+  position: relative;
 }
 
 .visual-section5 {
   height: 610px;
   position: absolute;
-  bottom: -300px;
+  bottom: 150px;
   left: 0;
   width: 100%;
 }
@@ -520,6 +566,25 @@
   bottom: 70px;
   right: 70px;
   border-radius: 50%;
+  animation: flying infinite 2s;
+  transition: background ease-in-out .3s;
+}
+
+@keyframes flying{
+  0%{
+    transform:translateY(0%);
+  }
+  50%{
+    transform:translateY(30%);
+  }
+  100%{
+    transform:translateY(0%);
+  }
+}
+
+.visual-section5 .visual-container .send-message .submit-btn:hover{
+  background:#359eff;
+  transition: background ease-in-out .3s;
 }
 
 .visual-section5 .visual-container .send-message .submit-btn::after {
@@ -536,7 +601,14 @@
   background: url("../image/paper.svg") center center no-repeat;
   background-position-x: -1px;
   padding-left: 1px;
+  transition:ease-in-out .3s;
 }
+
+.visual-section5 .visual-container .send-message .submit-btn:hover::after{
+  transform:rotate(60deg);
+  transition:ease-in-out .3s;
+}
+
 
 .visual-section5 .visual-container .contact-information {
   width: 33.75%;
@@ -621,6 +693,12 @@
   overflow: hidden;
   max-width: 60px;
   padding: 0 20px;
+  transition:ease-in-out all .5s;
+}
+
+.visual-section5 .visual-container .contact-information .sns a:hover{
+  transition:ease-in-out all .3s;
+  transform: scale(1.3);
 }
 
 .visual-section5 .visual-container .contact-information .sns a:first-child {
@@ -633,4 +711,174 @@
 
 .visual-section5 .visual-container .contact-information .sns a:nth-child(3) {
   background: url("../image/instagram.svg") center center no-repeat;
+}
+
+.visual-section5 .visual-container .contact-information .sns a:nth-child(4) {
+  background: url("../image/kakao-talk.svg") center center no-repeat;
+}
+
+
+@media screen and (max-width:1200px) and (min-width:961px)
+{
+  
+}
+
+@media screen and (max-width:1199px){
+  .visual-section1{
+    height:100vh;
+  }
+  .visual-container{
+    width:100%;
+  }
+
+  
+}
+
+@media screen and (max-width:960px) and (min-width:721px){
+  
+  .visual-section4 .visual-container .project-wrap .project::before{
+    width:90%;
+  }
+}
+
+@media screen and (max-width:720px) and (min-width:415px){
+  
+
+  .visual-section2 .visual-container .face-image-box .face-image-shadow{
+    top: 40px;
+    left: 220px;
+  }
+
+  .visual-section3 .visual-container .skill-list{
+    bottom:100px;
+  }
+
+  .visual-section5 .visual-container .contact-information .contact-contents{
+    margin:0 auto;
+    width:280px;
+  }
+
+  .visual-section5 .visual-container .contact-information .contact-contents:not(:first-child){
+    margin-top:15px;
+  }
+
+  .visual-section5 .visual-container .contact-information .personal-data::after{
+    margin-top:30px;
+  }
+  
+
+}
+
+@media screen and (max-width:720px){
+  .visual-section1 .introduce{
+    width:100%;
+  }
+  .visual-section1 .intro-image,
+  .visual-section1 .intro-wrap{
+    width:0%;
+  }
+
+  .visual-section2 .visual-container .face-image-box{
+    width: 100%;
+  }
+  .visual-section2 .visual-container .about-me{
+    display: table-row;
+    text-align: center;
+  }
+
+  .visual-section-wrap2{
+    height:2840px;
+  }
+
+  .visual-section3 .visual-container .skill-list .skill{
+    margin-top:20px;
+  }
+
+  .visual-section4 .visual-container .project-wrap .project{
+    display: block;
+  }
+
+  .visual-section4 .visual-container .project-wrap .project:not(:first-child){
+    margin-top:70px;
+  }
+
+  .visual-section4 .visual-container .project-wrap .project::before{
+    width:90%;
+  }
+
+  .visual-section4 .visual-container .project-wrap .project:first-child::before{
+    background:url("../image/landing648.jpg") no-repeat center center;
+  }
+
+  .visual-section4 .visual-container .project-wrap .project:nth-child(2)::before{
+    background:url("../image/vivid648.jpg") no-repeat center center;
+  }
+
+  .visual-section4 .visual-container .project-wrap .project:nth-child(3)::before{
+    background:url("../image/baemin648.jpg") no-repeat center center;
+  }
+
+  .visual-section4 .visual-container .project-wrap .project:nth-child(4)::before{
+    background:url("../image/tour648.jpg") no-repeat center center;
+  }
+
+  .visual-section5 .visual-container .send-message,
+  .visual-section5 .visual-container .contact-information{
+    display:block;
+    width:100%;
+  }
+
+  .visual-section5 .visual-container .contact-information strong{
+    text-align: center;
+  }
+
+  .visual-section5 .visual-container .contact-information .contact-contents .contact-image{
+    width:44px;
+  }
+
+  .visual-section5 .visual-container .contact-information .sns{
+    margin:0 auto;
+  }
+  .visual-section5 .visual-container .contact-information .sns a{
+    height:45px;
+    padding:0 40px;
+  }
+}
+
+@media screen and (max-width:414px) and (min-width:361px){
+  .visual-section2 .visual-container .face-image-box .face-image-shadow{
+    top:20px;
+    left:65px;
+  }
+
+  .visual-section2 .visual-container .about-me p{
+    font-size:1.5rem;
+  }
+
+  
+
+  .visual-section4 .visual-container .project-wrap .project:first-child::before{
+    background-position:94% 10%;
+  }
+}
+
+@media screen and (max-width:414px){
+  .visual-section3 .visual-container .skill-list{
+    bottom:50px;
+  }
+}
+
+@media screen and (max-width:360px){
+  .visual-section2 .visual-container .face-image-box .face-image-shadow{
+    top:50px;
+    left:40px;
+  }
+
+  .visual-section2 .visual-container .about-me p{
+    font-size: 1.2rem;
+  }
+  
+  .visual-section5 .visual-container .contact-information{
+    padding:95px 20px;
+  }
 }

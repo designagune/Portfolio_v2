@@ -8,10 +8,6 @@
   <link href="./css/reset.css" rel="stylesheet" />
   <link href="./css/common.css" rel="stylesheet" />
   <link href="./css/index.css" rel="stylesheet" />
-
-  <script src="./js/TweenMax.min.js"></script>
-  <script src="./js/index.js"></script>
-
 </head>
 
 <body>
@@ -573,6 +569,7 @@
           <div class="skill">ReactJS</div>
           <div class="skill">PHP</div>
           <div class="skill">PhotoShop</div>
+
         </div>
       </div>
     </section>
@@ -591,60 +588,70 @@
       </div>
     </section>
   </div>
-  <section class="visual-section5">
-    <div class="visual-container">
-      <div class="send-message">
-        <form>
-          <h3>Send Message</h3>
-          <label>Writer</label>
-          <input type="text" required placeholder="홍길동" />
-          <label>Email</label>
-          <input type="text" required placeholder="hong1234@gmail.com" />
-          <label>Tel</label>
-          <input type="text" required placeholder="010-8765-4321" />
-          <label>Message</label>
-          <textarea required placeholder="Hi! Would u like to work for our company? call me ~"></textarea>
-          <button class="submit-btn"></button>
-        </form>
-      </div>
-      <div class="contact-information">
-        <strong>Contact Information</strong>
-        <div class="personal-data">
-          <div class="addr contact-contents">
-            <div class="contact-image">
-              <img src="./image/location.svg" alt="location" />
+  <div class="visual-section-wrap3">
+    <section class="visual-section5">
+      <div class="visual-container">
+        <div class="send-message">
+          <form id="contact-form">
+            <h3>Send Message</h3>
+            <input type="hidden" name="contact_number" />
+            <label>Writer</label>
+            <input type="text" required placeholder="홍길동" name="from_name" />
+            <label>Email</label>
+            <input type="text" required placeholder="hong1234@gmail.com" name="to_name" />
+            <label>Tel</label>
+            <input type="text" placeholder="010-8765-4321" name="number" />
+            <label>Message</label>
+            <textarea required name="contact"
+              placeholder="Hi! Would u like to work for our company? call me ~"></textarea>
+            <button class="submit-btn" type="submit"></button>
+          </form>
+        </div>
+        <div class="contact-information">
+          <strong>Contact Information</strong>
+          <div class="personal-data">
+            <div class="addr contact-contents">
+              <div class="contact-image">
+                <img src="./image/location.svg" alt="location" />
+              </div>
+              <div class="contact-text">
+                232, Jangan-ro, Jangan-gu<br />
+                Suwon, Gyeonggi
+              </div>
             </div>
-            <div class="contact-text">
-              232, Jangan-ro, Jangan-gu<br />
-              Suwon, Gyeonggi
+            <div class="tel contact-contents">
+              <div class="contact-image">
+                <img src="./image/mobile.svg" alt="moblie" />
+              </div>
+              <div class="contact-text">
+                <a href="tel:01094356684">+82 10-9435-6684</a>
+              </div>
+            </div>
+            <div class="email contact-contents">
+              <div class="contact-image">
+                <img src="./image/email.svg" alt="mail" />
+              </div>
+              <div class="contact-text">
+                <a href="mailto:ehdrjs4046@gmail.com">ehdrjs4046@gmail.com</a>
+              </div>
             </div>
           </div>
-          <div class="tel contact-contents">
-            <div class="contact-image">
-              <img src="./image/mobile.svg" alt="moblie" />
-            </div>
-            <div class="contact-text">
-              <a href="tel:01094356684">+82 10-9435-6684</a>
-            </div>
-          </div>
-          <div class="email contact-contents">
-            <div class="contact-image">
-              <img src="./image/email.svg" alt="mail" />
-            </div>
-            <div class="contact-text">
-              <a href="mailto:ehdrjs4046@gmail.com">ehdrjs4046@gmail.com</a>
-            </div>
+          <div class="sns">
+            <a href="https://www.facebook.com/designagune" target="_blank">facebook</a>
+            <a href="https://github.com/designagune" target="_blank">github</a>
+            <a href="https://www.instagram.com/designa__gune/" target="_blank">instagram</a>
+            <a href="http://pf.kakao.com/_sxavnxb/chat" target="_blank">kakao</a>
           </div>
         </div>
-        <div class="sns">
-          <a href="https://www.facebook.com/designagune" target="_blank">facebook</a>
-          <a href="https://github.com/designagune" target="_blank">github</a>
-          <a href="https://www.instagram.com/designa__gune/" target="_blank">instagram</a>
-          <a href="http://pf.kakao.com/_sxavnxb/chat" target="_blank">kakao</a>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+  <script src="./js/mail.js"></script>
+  <script src="./js/TweenMax.min.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

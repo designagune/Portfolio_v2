@@ -1,29 +1,29 @@
-window.onload = function () {
 
-  /* word slide */
-  var word = document.querySelectorAll(".me-wrap span");
-  var eq = 1;
 
-  obj();
+/* word slide */
+var word = document.querySelectorAll(".me-wrap span");
+var eq = 1;
 
-  setInterval(function () {
-    eq < word.length + 1 ? obj() : (eq = 1, obj());
-    eq++;
-  }, 2000);
+obj();
 
-  function obj() {
-    eq === 1
-      ? document.querySelector(".me-wrap span:nth-child(4)").classList.add("me-out")
-      : document.querySelector(".me-wrap span:nth-child(" + (eq - 1) + ")").classList.add("me-out");
+setInterval(function () {
+  eq < word.length + 1 ? obj() : (eq = 1, obj());
+  eq++;
+}, 2000);
 
-    [].forEach.call(word, function (v) {
-      v.classList.remove("active", "me-in");
-    });
+function obj() {
+  eq === 1
+    ? document.querySelector(".me-wrap span:nth-child(4)").classList.add("me-out")
+    : document.querySelector(".me-wrap span:nth-child(" + (eq - 1) + ")").classList.add("me-out");
 
-    document.querySelector(".me-wrap span:nth-child(" + eq + ")").classList.remove("me-out");
-    document.querySelector(".me-wrap span:nth-child(" + eq + ")").classList.add("me-in");
-  }
-};
+  [].forEach.call(word, function (v) {
+    v.classList.remove("active", "me-in");
+  });
+
+  document.querySelector(".me-wrap span:nth-child(" + eq + ")").classList.remove("me-out");
+  document.querySelector(".me-wrap span:nth-child(" + eq + ")").classList.add("me-in");
+}
+
 
 /* title anime */
 var tnf = true;
@@ -39,7 +39,7 @@ window.addEventListener("scroll", function (e) {
 
     TweenMax.to(".intro-wrap", 1, {
       opacity: 1,
-      height: 980,
+      height: "100%",
       width: 1920,
       ease: Circ.easeInOut,
       onComplete: function () {
@@ -54,23 +54,35 @@ window.addEventListener("scroll", function (e) {
   }
 
   /* scroll parallax */
-  console.log(document.querySelector("html").scrollTop);
   var locate = window.pageYOffset;
   var svg = document.querySelector("#title-svg");
-  // console.log(locate);
-  // console.log(document.querySelector("#title-svg").style);
-  if (locate > 840) {
-    [].forEach.call(document.querySelectorAll("path"), function (v) {
-      v.style.fill = "#333";
-      v.style.stroke = "#333";
-    });
+  var viewWidth = window.innerWidth;
+  console.log(window.pageYOffset);
+  if (viewWidth > 1200) {
+    changeLogo(840);
+  } else if (viewWidth <= 1200 && viewWidth > 960) {
+    changeLogo(680);
+  } else if (viewWidth <= 960) {
+    changeLogo(1150);
   }
-  else {
-    [].forEach.call(document.querySelectorAll("path"), function (v) {
-      v.style.fill = "#EDF2FF";
-      v.style.stroke = "#EDF2FF";
-    });
+
+  function changeLogo(scrollValue) {
+    if (locate > scrollValue) {
+      [].forEach.call(document.querySelectorAll("path"), function (v) {
+        v.style.fill = "#333";
+        v.style.stroke = "#333";
+      });
+    }
+    else {
+      [].forEach.call(document.querySelectorAll("path"), function (v) {
+        v.style.fill = "#EDF2FF";
+        v.style.stroke = "#EDF2FF";
+      });
+    }
   }
+
+
+
 
   if (locate > 0 && locate < 980) {
     var calcValueTop = 50 - locate / 8;
