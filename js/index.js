@@ -81,9 +81,6 @@ window.addEventListener("scroll", function (e) {
     }
   }
 
-
-
-
   if (locate > 0 && locate < 980) {
     var calcValueTop = 50 - locate / 8;
     var calcValueRight = 50 - locate / 8.5;
@@ -97,3 +94,8 @@ window.addEventListener("scroll", function (e) {
   }
 });
 
+[].forEach.call(document.querySelectorAll(".project"), function (v) {
+  v.addEventListener("click", function () {
+    console.log(this);
+  });
+});
