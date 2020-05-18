@@ -424,6 +424,9 @@
   position: relative;
   top: 117px;
 }
+.visual-section4 .visual-container .project-wrap .project .project-image{
+  cursor: pointer;
+}
 
 .visual-section4 .visual-container .project-wrap .project .project-image::before {
   content: "";
@@ -487,7 +490,7 @@
   z-index: 11;
   padding:30px;
   color:#333;
-  font-family: roboto;
+  font-family: roboto, notoKR;
   display: none;
   opacity: 0;
 }
@@ -1018,13 +1021,16 @@
   .visual-section2 .visual-container .about-me p{
     font-size:1.5rem;
   }
-
+  .detail-box h3{
+    font-size:2.6rem;
+  }
 }
 
 @media screen and (max-width:414px){
   .visual-section3 .visual-container .skill-list{
     bottom:50px;
   }
+  
 }
 
 @media screen and (max-width:360px){
@@ -1039,5 +1045,9 @@
   
   .visual-section5 .visual-container .contact-information{
     padding:95px 20px;
+  }
+
+  .detail-box h3{
+    font-size:2.1rem;
   }
 }
