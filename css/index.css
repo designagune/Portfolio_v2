@@ -262,8 +262,7 @@
 }
 
 .visual-section3 .visual-container p {
-  font-weight: bold;
-  font-family: notoKR;
+  font-family: notoKR-bold;
   color: #0c5eb2;
   margin-top: 26px;
 }
@@ -410,8 +409,7 @@
 }
 
 .visual-section4 .visual-container p {
-  font-weight: bold;
-  font-family: notoKR;
+  font-family: notoKR-bold;
   color: #0c5eb2;
   margin-top: 26px;
   position: relative;
@@ -444,7 +442,6 @@
 }
 .visual-section4 .visual-container .project-wrap .project p{
   color: #2b2b2b;
-  font-weight: bold;
 }
 
 .visual-section4 .visual-container .project-wrap .landing-page .project-image::before {
@@ -971,6 +968,13 @@
   .visual-section2 .visual-container .about-me{
     display: table-row;
     text-align: center;
+  }
+
+  .font1{
+    font-family: notoKR;
+  }
+  .font2{
+    font-family: notoKR-bold;
   }
 
   .visual-section-wrap2{
