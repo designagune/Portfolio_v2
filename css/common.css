@@ -1,31 +1,29 @@
 @font-face {
-    font-family: notoKR-thin;
-    src: url("../font/NotoSansKR-Thin.otf");
-}
-
-@font-face {
     font-family: notoKR;
-    src: url("../font/NotoSansKR-Regular.otf");
+    src: url("../font/NotoSansKR-Regular.woff2") format('woff2'),
+         url("../font/NotoSansKR-Regular.woff") format('woff'),
+         url("../font/NotoSansKR-Regular.otf") format('opentype');
 }
 
 @font-face {
     font-family: notoKR-bold;
-    src: url("../font/NotoSansKR-Bold.otf");
-}
-
-@font-face {
-    font-family: roboto-thin;
-    src: url("../font/Roboto-Thin.ttf");
+    src: url("../font/NotoSansKR-Bold.woff2") format('woff2'),
+         url("../font/NotoSansKR-Bold.woff") format('woff'),
+         url("../font/NotoSansKR-Bold.otf") format('opentype');
 }
 
 @font-face {
     font-family: roboto;
-    src: url("../font/Roboto-Regular.ttf");
+    src: url("../font/Roboto-Regular.woff2") format('woff2'),
+         url("../font/Roboto-Regular.woff") format('woff'),
+         url("../font/Roboto-Regular.ttf") format('truetype');
 }
 
 @font-face {
     font-family: roboto-bold;
-    src: url("../font/Roboto-Bold.ttf");
+    src: url("../font/Roboto-Bold.woff2") format('woff2')
+         url("../font/Roboto-Bold.woff") format('woff')
+         url("../font/Roboto-Bold.ttf") format('truetype');
 }
 
 .visual-container {
