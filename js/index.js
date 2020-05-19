@@ -37,7 +37,7 @@ window.addEventListener("scroll", function (e) {
       display: "none"
     });
 
-    TweenMax.to(".intro-wrap", 1, {
+    TweenMax.to(".intro-wrap", 0.5, {
       opacity: 1,
       height: "100%",
       width: 1920,

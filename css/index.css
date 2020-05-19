@@ -87,7 +87,7 @@
 
 .visual-section1 .intro-wrap .intro-title .st0[data-status=on]
 {
-  animation: title-animation 3s;
+  animation: title-animation 1.8s;
   opacity: 1;
 }
 
@@ -365,8 +365,8 @@
   content: "";
   display: block;
   position: absolute;
-  background: url("../image/section_background.jpg") no-repeat;
-  opacity: 0.25;
+  background: url("../image/section_background_1.jpg") no-repeat;
+  opacity: 0.4;
   background-size: cover;
   top: 0;
   left: 0;
