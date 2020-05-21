@@ -17,7 +17,7 @@ function obj() {
     : document.querySelector(".me-wrap span:nth-child(" + (eq - 1) + ")").classList.add("me-out");
 
   [].forEach.call(word, function (v) {
-    v.classList.remove("active", "me-in");
+    v.classList.remove("active", "megi-in");
   });
 
   document.querySelector(".me-wrap span:nth-child(" + eq + ")").classList.remove("me-out");
