@@ -62,21 +62,22 @@ window.addEventListener("scroll", function (e) {
     changeLogo(840);
   } else if (viewWidth <= 1200 && viewWidth > 960) {
     changeLogo(680);
-  } else if (viewWidth <= 960) {
+  } else if (viewWidth <= 960 && viewWidth > 414) {
     changeLogo(1150);
+  } else if (viewWidth <= 414) {
+    changeLogo(660);
   }
 
   function changeLogo(scrollValue) {
-    if (locate > scrollValue) {
+    if (locate > scrollValue) pathColor("#333");
+    else pathColor("#EDF2FF");
+
+    //(locate > scrollValue) ? pathColor("#333") : pathColor("#333") why..?
+
+    function pathColor(color) {
       [].forEach.call(document.querySelectorAll("path"), function (v) {
-        v.style.fill = "#333";
-        v.style.stroke = "#333";
-      });
-    }
-    else {
-      [].forEach.call(document.querySelectorAll("path"), function (v) {
-        v.style.fill = "#EDF2FF";
-        v.style.stroke = "#EDF2FF";
+        v.style.fill = color;
+        v.style.stroke = color;
       });
     }
   }
@@ -95,8 +96,6 @@ window.addEventListener("scroll", function (e) {
 });
 
 /*  click detail data */
-
-
 
 [].forEach.call(document.querySelectorAll(".project-image"), function (v) {
   v.addEventListener("click", function () {
@@ -126,8 +125,8 @@ window.addEventListener("scroll", function (e) {
     info.children[5].innerHTML = data[clickIndex].tool;
     info.children[7].innerHTML = data[clickIndex].crossBrowsing;
     info.children[9].innerHTML = data[clickIndex].responsive;
-    info.children[10].setAttribute("href", data[clickIndex].gitLink);
     info.children[11].innerHTML = data[clickIndex].btnText;
+    info.children[10].setAttribute("href", data[clickIndex].gitLink);
     info.children[11].setAttribute("href", data[clickIndex].btnLink);
 
 
@@ -148,13 +147,27 @@ window.addEventListener("scroll", function (e) {
 });
 
 /* if close click, hide detail data */
-document.querySelector(".close").addEventListener("click", function () {
+[].forEach.call(document.querySelectorAll(".close,.visual-detail-contents-wrap"), function (v) {
+  v.addEventListener("click", function () {
+    modalClose();
+  });
+});
+
+function modalClose() {
   document.querySelector(".visual-detail-contents-wrap").style.height = "0%";
   document.querySelector(".visual-detail-contents-wrap").style.display = "none";
   document.querySelector(".detail-box").style.width = "0%";
   document.querySelector(".detail-box").style.opacity = "0";
   document.querySelector(".detail-box").style.display = "none";
+}
 
+/* if close button context is back */
+var demoPage = document.querySelector(".demopage");
+demoPage.addEventListener("click", function (e) {
+  if (demoPage.innerHTML === "Back") {
+    e.preventDefault();
+    modalClose();
+  }
 });
 
 /* real detail data */

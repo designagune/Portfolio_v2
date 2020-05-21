@@ -16,7 +16,7 @@
     * ![color](https://img.shields.io/badge/BrandColor--------------------------------%23FFF) ```#FFF``` 사용
     * 블루 계열 컬러를 사용하여 신뢰감을 줄수 있도록 하며 화이트 컬러로 여백을 살려 컨텐츠를 집중시킬수 있도록 디자인
   + Font
-    * 한글 - ```NotoSans KR```
+    * 한글 - ```Spoqa Han Sans```
     * 영문 - ```Roboto```
 <br /><br /><br />
 ### 기술
