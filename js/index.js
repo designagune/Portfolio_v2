@@ -1,5 +1,3 @@
-
-
 /* word slide */
 var word = document.querySelectorAll(".me-wrap span");
 var eq = 1;
