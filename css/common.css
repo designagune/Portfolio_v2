@@ -31,6 +31,10 @@
     /* background: #eee; */
 }
 
+body,html{
+    overflow-x: hidden;
+}
+
 body {
     position: relative;
 }

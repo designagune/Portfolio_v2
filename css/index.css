@@ -279,8 +279,11 @@
 }
 
 .visual-section3 .visual-container .skill-list .skill-wrap{
-  display: table-cell;
-  table-layout: fixed;
+  width:50%;
+  display: flex;
+  justify-content: space-around;
+  
+  
 }
 
 .visual-section3 .visual-container .skill-list .skill {
@@ -974,9 +977,18 @@
     height:2840px;
   }
 
+  .visual-section3 .visual-container .skill-list{
+    display: block;
+  }
+
+  .visual-section3 .visual-container .skill-list .skill-wrap{
+    margin:0 auto;
+  }
+
   .visual-section3 .visual-container .skill-list .skill{
     margin-top:20px;
   }
+  
 
   .visual-section4 .visual-container .project-wrap .project{
     display: block;

@@ -22,7 +22,6 @@ function obj() {
   document.querySelector(".me-wrap span:nth-child(" + eq + ")").classList.add("me-in");
 }
 
-
 /* title anime */
 var tnf = true;
 window.addEventListener("scroll", function (e) {
