@@ -433,7 +433,7 @@
   content: "";
   display: block;
   margin: 0 auto 20px;
-  width: 277px;
+  max-width: 277px;
   height: 400px;
   box-shadow: -1px 1px 10px #ccc;
   cursor: pointer;
@@ -894,7 +894,7 @@
   
 }
 
-@media screen and (max-width:1199px){
+@media screen and (max-width:1220px){
   .visual-section1{
     height:100vh;
   }
@@ -940,6 +940,10 @@
     bottom:100px;
   }
 
+  .visual-section5 .visual-container .contact-information{
+    padding:95px 20px;
+  }
+
   .visual-section5 .visual-container .contact-information .contact-contents{
     margin:0 auto;
     width:280px;
@@ -953,7 +957,7 @@
     margin-top:30px;
   }
   
-
+  
 }
 
 @media screen and (max-width:720px){
@@ -968,6 +972,11 @@
   .visual-section2 .visual-container .face-image-box{
     width: 100%;
   }
+
+  .visual-section2 .visual-container .face-image-box .face-image-shadow{
+    display: none;
+  }
+
   .visual-section2 .visual-container .about-me{
     display: table-row;
     text-align: center;
@@ -1038,6 +1047,10 @@
 @media screen and (max-width:414px){
   .visual-section3 .visual-container .skill-list{
     bottom:50px;
+  }
+
+  .visual-section5 .visual-container .contact-information{
+    padding:95px 10px;
   }
   
 }
